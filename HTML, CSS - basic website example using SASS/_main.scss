@@ -1,0 +1,85 @@
+.main {
+  background-color: $light;
+  margin: 0 1rem;
+  height: 90vh;
+  overflow: hidden;
+
+  &__container {
+    @include FlexAlignCenter(center);
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include mobile {
+      flex-direction: column;
+      height: initial;
+      margin-top: 3rem;
+      gap: 6rem;
+    }
+
+    &--left {
+      flex-basis: 70%;
+
+      h1 {
+        color: $lime;
+      }
+
+      h1,
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+
+      button {
+        background-color: $lime;
+        padding: 12px 24px;
+        color: $light;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $orange;
+        }
+      }
+    }
+
+    &--right {
+      flex-basis: 30%;
+      @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ili samo text-align: center; */
+      }
+
+      &--img {
+        width: 100%;
+        height: 100%;
+        animation: slide-up 3s ease 1s forwards;
+        margin-bottom: -80vh;
+        @include mobile {
+          width: 70%;
+          height: 70%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      @keyframes slide-up {
+        0% {
+          margin-bottom: -80vh;
+        }
+
+        100% {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

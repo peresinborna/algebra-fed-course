@@ -1,0 +1,47 @@
+@mixin FlexAlignCenter($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+.navbar {
+  @include FlexAlignCenter(space-between);
+  padding: 0 calc((100vw - 1200px) / 2);
+  height: 10vh;
+  @include desktop {
+    margin: 0 1rem;
+  }
+
+  &__logo {
+    color: $dark;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  &__menu {
+    @include FlexAlignCenter(flex-start);
+    gap: 1rem;
+
+    &--links {
+      text-decoration: none;
+      color: $dark;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $lime;
+      }
+
+      &:last-child {
+        background-color: $lime;
+        padding: 12px 24px;
+        color: $light;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+}
