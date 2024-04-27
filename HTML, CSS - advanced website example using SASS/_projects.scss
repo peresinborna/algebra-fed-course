@@ -1,0 +1,85 @@
+.projects__gornja {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://unsplash.it/1920/1080);
+  @include flex(center, flex-end);
+  color: $text-color;
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+    color: $accent-color;
+  }
+}
+
+.projects__donja {
+  background-color: $primary-color;
+  color: $text-color;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 3rem;
+
+  &--sekcija {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 1rem 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    &--card {
+      border-bottom: 5px solid $accent-color;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $accent-color;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+        @extend %transition-ease;
+        opacity: 0;
+      }
+
+      &:hover {
+        &::after {
+          top: 0;
+          opacity: 0.8;
+        }
+      }
+
+      &--btn {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+        gap: 2rem;
+        @extend %transition-ease;
+        z-index: 2;
+        opacity: 0;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        a {
+          color: $text-color;
+          @extend %transition-ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

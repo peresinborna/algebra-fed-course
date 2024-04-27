@@ -1,0 +1,26 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  &__menu {
+    @include flex(flex-end, center);
+    font-size: 2.2rem;
+    gap: 2rem;
+    list-style: none;
+    padding: 2rem;
+
+    &--list a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $text-color;
+      @extend %transition-ease;
+      font-weight: map-get($font-weights, semi-bold);
+
+      &.active,
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}

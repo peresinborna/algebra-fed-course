@@ -1,0 +1,41 @@
+.about__gornja {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://unsplash.it/1920/1080);
+  @include flex(center, flex-end);
+  color: $text-color;
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+    color: $accent-color;
+  }
+
+  p {
+    font-size: 2rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.about__donja {
+  background-color: $primary-color;
+  color: $text-color;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 3rem;
+
+  &--jobs {
+    background-color: $card-color;
+    border-bottom: 5px solid $accent-color;
+    margin-bottom: 2.5rem;
+    width: 60%;
+    margin: 2rem auto;
+    padding: 1rem 0.5rem;
+
+    h2 {
+      color: $accent-color;
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

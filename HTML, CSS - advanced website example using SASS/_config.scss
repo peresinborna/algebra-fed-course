@@ -1,0 +1,37 @@
+$primary-color: #272727;
+$accent-color: #ff6527;
+$text-color: #fff;
+$card-color: #414141;
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+%transition-ease {
+  transition: all 0.5s ease-in;
+}
+
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+body {
+  height: 100vh;
+}

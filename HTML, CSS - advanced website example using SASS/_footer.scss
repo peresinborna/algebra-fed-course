@@ -1,0 +1,35 @@
+footer {
+  @include flex(space-between, center);
+  font-size: 1.6rem;
+  position: fixed;
+  z-index: 1;
+  bottom: 1rem;
+  color: $text-color;
+  width: 100%;
+  padding: 2rem;
+}
+
+.social {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: 3rem;
+  }
+}
+
+.footer__okomit {
+  .social {
+    flex-direction: column;
+  }
+
+  p {
+    transform: rotate(90deg) translate(3.5rem, -5rem);
+  }
+}
+
+.footer__vodoravan {
+  justify-content: flex-end;
+}
