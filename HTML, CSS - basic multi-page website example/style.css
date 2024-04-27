@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --siva: #35424a;
+  --narancasta: #e8491d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5; /* Koef. 1.6x1.5 */
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+h1,
+h1 span {
+  font-size: 6rem;
+}
+
+h1 span {
+  color: var(--narancasta);
+}
+
+/* Header */
+
+header {
+  background-color: var(--siva);
+  border-bottom: 3px solid var(--narancasta);
+  padding: 1rem 0;
+}
+
+header img {
+  width: 9rem;
+  padding-bottom: 7px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.active,
+nav a:hover {
+  color: var(--narancasta);
+}
+
+/* Početna - Main section - Showcase */
+
+.showcase {
+  height: 40rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./slike/showcase.jpg) 0 0 / cover;
+  color: white;
+  text-align: center;
+  display: flex;
+}
+
+/* Početna - Main section - Newsletter */
+
+.newsletter {
+  background-color: var(--siva);
+}
+
+.newsletter .container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  color: white;
+}
+
+.newsletter input {
+  width: 25rem;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.newsletter input::placeholder {
+  color: black;
+  padding-left: 2px;
+}
+
+.btn {
+  background-color: var(--narancasta);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Početna - Main section - Boxes section */
+
+.boxes .container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.boxes img {
+  width: 70%;
+}
+
+/* O nama - Info */
+
+.info .container {
+  display: flex;
+  gap: 2rem;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+}
+
+.info p {
+  padding-top: 1.5rem;
+}
+
+article {
+  flex-basis: 70%;
+}
+
+aside {
+  flex-basis: 30%;
+  background-color: var(--siva);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Kontakt - main section */
+
+.contact {
+  list-style: none;
+}
+
+.contact li {
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+aside input,
+aside textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.3rem;
+}
+
+aside input::placeholder,
+aside textarea::placeholder {
+  color: #000;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--narancasta);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+@media all and (max-width: 981px) {
+  .info .container {
+    width: 90%;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .newsletter .container {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .boxes .container {
+    gap: 1rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  /*   .boxes .container {
+    flex-wrap: wrap;
+  } */
+}
