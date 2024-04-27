@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Saira&display=swap");
+
+/* Generalna stilizacija i reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+    url(./slike/pozadina.jpg);
+  background-size: cover;
+}
+
+h1,
+h1 span {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+}
+
+h1 span {
+  color: #ad5750;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  padding-left: 10px;
+}
+
+button {
+  background-color: #ad5750;
+  cursor: pointer;
+  border: none;
+  font-size: 1.25rem;
+}
+
+/* Header stilizacija */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+
+nav,
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav {
+  align-items: baseline;
+}
+
+header img {
+  width: 150px;
+  height: auto;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav form {
+  border-bottom: 1px solid #ad5750;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Main stilizacija */
+
+main {
+  display: flex;
+  margin: 2rem;
+  gap: 5rem;
+}
+
+section button {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+aside {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+aside h2 {
+  background-color: white;
+  color: #ad5750;
+  text-align: center;
+  border-radius: 5px;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+aside input {
+  border-bottom: 1px solid #ad5750;
+  width: 15rem;
+  margin-top: 3rem;
+}
+
+aside button {
+  width: 50%;
+  margin: 2rem auto 0;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+aside a,
+aside p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+aside a {
+  display: block;
+  text-decoration: none;
+  color: #ad5750;
+}
