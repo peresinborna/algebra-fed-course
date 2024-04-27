@@ -1,0 +1,151 @@
+:root {
+  --tamna-pozadina: #212429;
+  --glavna-pozadina: #f9f9fb;
+  --sivi-tekst: #999;
+  --shadow: 3px 3px 2px #f5f5f7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--glavna-pozadina);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.7rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Header i navigacija */
+
+header {
+  background-color: var(--tamna-pozadina);
+}
+
+nav {
+  width: 94%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav i[class*="fa"] {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+nav i {
+  border-right: 1px solid white;
+  transition: color 1.5s ease-in-out;
+}
+
+nav i:hover {
+  color: var(--sivi-tekst);
+}
+
+nav i:first-child {
+  border-left: 1px solid white;
+}
+
+nav > a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Glavna navigacija */
+
+.main-nav {
+  position: absolute;
+  list-style: none;
+  top: -100%;
+  background-color: var(--tamna-pozadina);
+  width: 94%;
+  padding: 1rem;
+}
+
+.main-nav.active {
+  top: 6rem;
+}
+
+.main-nav li {
+  margin: 1rem 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 1.5s ease;
+}
+
+.main-nav a:hover {
+  border-bottom: 1px solid #f5f5f7;
+}
+
+.menu-toggle {
+  width: 5.7rem;
+}
+
+/* Footer sekcija */
+
+footer {
+  background-color: var(--tamna-pozadina);
+}
+
+.footer-container {
+  width: 94%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  color: white;
+  gap: 3.5rem;
+  padding-top: 7rem;
+}
+
+footer h2 {
+  margin-bottom: 4.5rem;
+}
+
+footer p {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.footer-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+footer hr {
+  margin: 1.5rem 0;
+  border: 1px solid white;
+}
+
+.copyright {
+  text-align: center;
+  color: #616366;
+  background-color: #17191c;
+  padding: 1.5rem 0;
+}

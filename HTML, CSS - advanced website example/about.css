@@ -1,0 +1,166 @@
+:root {
+  --tamna-pozadina: #212429;
+  --glavna-pozadina: #f9f9fb;
+  --sivi-tekst: #999;
+  --shadow: 3px 3px 2px #f5f5f7;
+}
+
+/* About stranica */
+
+.about-main {
+  width: 94%;
+  margin: 12rem auto;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Article sekcija */
+
+.about-arcticle {
+  background-color: white;
+  flex-basis: 70%;
+  border: 1px solid #f8f8f9;
+  padding: 0 7rem;
+}
+
+.kartica-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.kartica-info > p {
+  order: -1;
+  margin-top: 8rem;
+  margin-bottom: 3.5rem;
+}
+
+.kartica-info p {
+  color: #999;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.kartica-info p i {
+  color: #464646;
+}
+
+.kartica-info-about {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  margin-top: 3rem;
+}
+
+.about-article > p,
+.about-article > blockquote {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.about-article > p {
+  color: #464646;
+  margin: 4rem 0;
+  text-align: justify;
+}
+
+.about-article > blockquote {
+  margin: 4rem 20%;
+  text-align: center;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+/* Aside sekcija */
+
+.about-aside {
+  flex-basis: 30%;
+  background-color: white;
+  padding: 4.5rem 2.5rem 3rem;
+  border: 1px solid #f8f8f9;
+}
+
+.about-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 5.5rem;
+}
+
+.about-aside input[type="text"] {
+  background-color: var(--glavna-pozadina);
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.about-aside input[type="submit"] {
+  font-family: "Font Awesome 6 Free", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  background-color: var(--tamna-pozadina);
+  padding: 2rem;
+  color: white;
+}
+
+aside h2 {
+  font-size: 1.7rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f8f8f9;
+  margin-bottom: 3rem;
+}
+
+.category-nav-links {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  line-height: 3.2;
+  border-bottom: 1px solid #f8f8f9;
+}
+
+.category-nav-links a,
+.category-nav-links span {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--tamna-pozadina);
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 1s ease-out;
+}
+
+.category-nav-links a:hover {
+  border-bottom: 1px solid var(--tamna-pozadina);
+}
+
+.latest-posts > img {
+  margin: 4.5rem 0;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #f8f8f9;
+}
+
+.posts:last-child {
+  border-bottom: none;
+}
+
+.text-container h3 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.text-container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.text-container-description {
+  color: var(--sivi-tekst);
+  font-size: 1.4rem;
+  display: flex;
+  gap: 2rem;
+}
